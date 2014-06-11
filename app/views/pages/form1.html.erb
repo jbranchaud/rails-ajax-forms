@@ -1,2 +1,20 @@
-<h1>Pages#form1</h1>
-<p>Find me in app/views/pages/form1.html.erb</p>
+<h1>form1</h1>
+<h2>Rails Ajax Forms</h2>
+
+<p>Here is a nice form:</p>
+
+<%= form_tag( { action: :form1 }, remote: true, role: :form) do %>
+  <div class="form-group">
+    <%= label_tag 'first_name', 'First Name:' %>
+    <%= text_field_tag 'first_name', "", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= label_tag 'last_name', 'Last Name:' %>
+    <%= text_field_tag 'last_name', "", class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= submit_tag "What's my name again?", name: nil, class: "btn btn-primary" %>
+  </div>
+<% end %>
