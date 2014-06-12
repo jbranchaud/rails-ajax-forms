@@ -54,3 +54,27 @@ URL which appears in the HTML.
   <input type="submit" value="Search" />
 </form>
 ```
+
+This is a basic Ajax form with both the controller and the action specified
+in place of an explicit URL. By also declaring the controller, I have clear
+indicated which action I intend. This also gives me the ability to specify
+an action residing in a controller other than the current one. As in the
+previous example, the controller and action specified will be resolved by
+Rails to a URL that is used in the resulting HTML.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms }, remote: true ) do %>
+  <%= text_field_tag 'search_field', "" %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms" data-remote="true" method="post">
+  <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+  </div>
+  <input id="search_field" name="search_field" type="text" value="" />
+  <input type="submit" value="Search" />
+</form>
+```
