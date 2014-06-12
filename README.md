@@ -6,9 +6,16 @@
 
 All of the following form examples are built using Rails'
 [`form_tag`](http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html#method-i-form_tag).
+I found the documentation a bit lacking, so I thought I would contribute my
+own (more extensive) documentation here.
+
 The idea is that these forms are being used to make
 [Ajax](https://developer.mozilla.org/en/docs/AJAX) requests. To enable this
-Ajax behavior, all the forms have `remote` set to `true`. To give our forms
+Ajax behavior, all the forms have `remote` set to `true`. If you want the
+forms to make normal (non-Ajax) requests to the Rails app, just leave
+`remote` alone because it defaults to `false`.
+
+To give these forms
 some body, they each include a text field and submit button, but these do
 not currently do anything interesting.
 
