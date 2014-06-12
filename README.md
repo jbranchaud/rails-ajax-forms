@@ -103,3 +103,19 @@ request be sent with the `get` method rather than the `post` method.
   ...
 </form>
 ```
+
+If I am using the `get` method to request some data with the response, I may
+want to request that data be in `json` format. I can request `json` data
+using an explicit URL that ends in `.json`.
+
+```erb
+<%= form_tag( '/pages/simple_forms.json', remote: true, method: :get ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json" data-remote="true" method="get">
+  ...
+</form>
+```
