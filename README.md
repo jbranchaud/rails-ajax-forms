@@ -4,7 +4,13 @@
 
 ## Playing with `form_tag` options
 
-This is the most basic Ajax form with an explicit URL provided.
+All of the following form examples are built using Rails'
+[`form_tag`](http://api.rubyonrails.org/classes/ActionView/Helpers/FormTagHelper.html#method-i-form_tag).
+The idea is that these forms are being used to make
+[Ajax](https://developer.mozilla.org/en/docs/AJAX) requests. To enable this
+Ajax behavior, all the forms have `remote` set to `true`. To give our forms
+some body, they each include a text field and submit button, but these do
+not currently do anything interesting.
 
 ```erb
 <%= form_tag( '/pages/simple_forms', remote: true ) do %>
