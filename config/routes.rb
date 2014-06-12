@@ -1,5 +1,6 @@
 RailsAjaxForms::Application.routes.draw do
   get "pages/form1"
+  get "pages/simple_forms"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

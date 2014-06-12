@@ -1,0 +1,10 @@
+<h1>Simple Forms</h1>
+<p>A series of simple AJAX forms with various options enabled.</p>
+
+<div class="form-example">
+  <p>The most basic Ajax form, explicit URL given.</p>
+  <%= form_tag( '/pages/simple_forms', remote: true ) do %>
+    <%= text_field_tag 'search_field', "" %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+</div>
