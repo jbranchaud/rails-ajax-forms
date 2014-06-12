@@ -81,3 +81,9 @@ Rails to a URL that is used in the resulting HTML.
   ...
 </form>
 ```
+
+You may have noticed in the previous two examples that the `action` and
+`controller` options were specified within a separate map. This map is the
+`url_for_options` argument and it contains the options related to the URL
+that will be requested by this form. I will show in a few examples how that
+will also give me the opportunity to specify the format I am requesting.
