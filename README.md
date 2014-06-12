@@ -12,6 +12,9 @@ Ajax behavior, all the forms have `remote` set to `true`. To give our forms
 some body, they each include a text field and submit button, but these do
 not currently do anything interesting.
 
+This is a basic Ajax form that explicitly defines the URL to which the
+request should be submitted.
+
 ```erb
 <%= form_tag( '/pages/simple_forms', remote: true ) do %>
   <%= text_field_tag 'search_field', "" %>
