@@ -87,3 +87,19 @@ You may have noticed in the previous two examples that the `action` and
 `url_for_options` argument and it contains the options related to the URL
 that will be requested by this form. I will show in a few examples how that
 will also give me the opportunity to specify the format I am requesting.
+
+This form is equivalent to the previous one except that I specify the
+request be sent with the `get` method rather than the `post` method.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms }, remote: true, method: :get ) do %>
+  ...
+<% end %>
+</div>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms" data-remote="true" method="get">
+  ...
+</form>
+```

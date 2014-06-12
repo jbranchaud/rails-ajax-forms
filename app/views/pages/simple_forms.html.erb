@@ -24,3 +24,11 @@
     <%= submit_tag "Search", name: nil %>
   <% end %>
 </div>
+
+<div class="form-example">
+  <p>A basic Ajax form with that sends a <code>get</code> request instead of a <code>post</code> request.</p>
+  <%= form_tag( { controller: :pages, action: :simple_forms }, remote: true, method: :get ) do %>
+    <%= text_field_tag 'search_field', "" %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+</div>
