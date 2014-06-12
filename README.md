@@ -19,6 +19,11 @@ To give these forms
 some body, they each include a text field and submit button, but these do
 not currently do anything interesting.
 
+The source for all of these forms is available in
+[`app/views/pages/simple_forms.html.erb`](https://github.com/jbranchaud/rails-ajax-forms/blob/master/app/views/pages/simple_forms.html.erb).
+If you clone and serve the project locally, it an be accessed at
+`/pages/simple_forms`.
+
 This is a basic Ajax form that explicitly defines the URL to which the
 request should be submitted.
 
