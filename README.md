@@ -31,3 +31,26 @@ request should be submitted.
   <input type="submit" value="Search" />
 </form>
 ```
+
+This is a basic Ajax form with the Rails action specified rather than an
+explicit URL. I am saying that I want the form request to be handled by that
+action. The action's controller will be inferred as the controller for
+this view. That controller plus the specified view will be resolved to the
+URL which appears in the HTML.
+
+```erb
+<%= form_tag( { action: :simple_forms }, remote: true ) do %>
+  <%= text_field_tag 'search_field', "" %>
+  <%= submit_tag "Search", name: nil %>
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms" data-remote="true" method="post">
+  <div style="margin:0;padding:0;display:inline">
+    <input name="utf8" type="hidden" value="&#x2713;" />
+  </div>
+  <input id="search_field" name="search_field" type="text" value="" />
+  <input type="submit" value="Search" />
+</form>
+```

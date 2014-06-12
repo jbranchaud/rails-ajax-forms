@@ -8,3 +8,11 @@
     <%= submit_tag "Search", name: nil %>
   <% end %>
 </div>
+
+<div class="form-example">
+  <p>The most basic Ajax form, action specified.</p>
+  <%= form_tag( { action: :simple_forms }, remote: true ) do %>
+    <%= text_field_tag 'search_field', "" %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+</div>
