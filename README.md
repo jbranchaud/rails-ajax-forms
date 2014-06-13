@@ -137,3 +137,19 @@ back to the code I had before the previous example and then add the
   ...
 </form>
 ```
+
+If I were a bit more old school, perhaps I would want to request some `xml`
+data instead of `json` data. A small modification to the previous form,
+specifying the format as `xml` rather than `json` will get me there.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :xml }, remote: true, method: :get ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.xml" data-remote="true" method="get">
+  ...
+</form>
+```
