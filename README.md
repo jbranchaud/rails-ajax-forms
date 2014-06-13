@@ -183,4 +183,6 @@ the actually markup by hand.
 
 ```html
 <form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic responsively" data-remote="true" method="get">
+  ...
+</form>
 ```
