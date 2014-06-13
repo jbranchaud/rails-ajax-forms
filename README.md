@@ -169,3 +169,18 @@ optionally assign a string wrapped in quotes.
 ```html
 <form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic" data-remote="true" method="get">
 ```
+
+If I am going to add a couple class selectors to the `class` attribute, then
+I need to wrap it in brackets making it a list. Alternatively, I can wrap it
+all in quotes with each separated by spaces as I would do if I was writing
+the actually markup by hand.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get, class: [:formtastic, :responsively] ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic responsively" data-remote="true" method="get">
+```

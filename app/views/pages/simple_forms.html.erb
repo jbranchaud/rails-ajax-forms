@@ -64,3 +64,11 @@
     <%= submit_tag "Search", name: nil %>
   <% end %>
 </div>
+
+<div class="form-example">
+  <p>A basic Ajax form (<code>get</code>, <code>json</code>) with multiple class attributes specified.</p>
+  <%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get, class: [:formtastic, :responsively] ) do %>
+    <%= text_field_tag 'search_field', "" %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+</div>
