@@ -229,3 +229,22 @@ matter of personal preference as well as consistency across the code base.
   ...
 </form>
 ```
+
+I can also add other kinds of standard attributes to the form. For instance,
+to make my intent clear, I can specify the
+[`role`](http://www.w3.org/TR/role-attribute/) of this form to be
+`form`. Sounds a little redundant, but why not?!
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get, role: :form ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json"
+  data-remote="true" method="get" role="form">
+  ...
+</form>
+```
