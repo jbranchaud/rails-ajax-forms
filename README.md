@@ -168,6 +168,8 @@ optionally assign a string wrapped in quotes.
 
 ```html
 <form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic" data-remote="true" method="get">
+  ...
+</form>
 ```
 
 If I am going to add a couple class selectors to the `class` attribute, then
