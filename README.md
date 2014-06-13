@@ -153,3 +153,19 @@ specifying the format as `xml` rather than `json` will get me there.
   ...
 </form>
 ```
+
+I am going to jump back to the `json` format for now. This next example
+shows how I can add a `class` attribute to the form allowing me to style the
+form or do weird things using jQuery. The `class` attribute is one of the
+*options* and can be specified just like I specified the method. I can
+optionally assign a string wrapped in quotes.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get, class: :formtastic ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic" data-remote="true" method="get">
+```
