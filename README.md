@@ -194,3 +194,20 @@ the actually markup by hand.
   ...
 </form>
 ```
+
+I can also add an `id` attribute if I'd like. It is even easier than the
+`class` attribute because it is three characters less that you have to type.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get, id: "single-id-form" ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json"
+  data-remote="true" id="single-id-form" method="get">
+  ...
+</form>
+```
