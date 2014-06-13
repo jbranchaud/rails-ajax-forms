@@ -40,3 +40,11 @@
     <%= submit_tag "Search", name: nil %>
   <% end %>
 </div>
+
+<div class="form-example">
+  <p>A basic <code>get</code> request Ajax form with <code>json</code> specified as the response format.</p>
+  <%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get ) do %>
+    <%= text_field_tag 'search_field', "" %>
+    <%= submit_tag "Search", name: nil %>
+  <% end %>
+</div>

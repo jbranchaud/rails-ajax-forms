@@ -119,3 +119,21 @@ using an explicit URL that ends in `.json`.
   ...
 </form>
 ```
+
+That seems a little dirty though. I would rather specify the `action` and
+`controller` as I was doing before as well as the `json` format and let
+Rails do the work of building the URL. I can do just that by jumping
+back to the code I had before the previous example and then add the
+`format` option to the `url_for_options` map.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json" data-remote="true" method="get">
+  ...
+</form>
+```
