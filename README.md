@@ -127,7 +127,8 @@ back to the code I had before the previous example and then add the
 `format` option to the `url_for_options` map.
 
 ```erb
-<%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get ) do %>
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get ) do %>
   ...
 <% end %>
 ```
@@ -143,7 +144,8 @@ data instead of `json` data. A small modification to the previous form,
 specifying the format as `xml` rather than `json` will get me there.
 
 ```erb
-<%= form_tag( { controller: :pages, action: :simple_forms, format: :xml }, remote: true, method: :get ) do %>
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :xml },
+  remote: true, method: :get ) do %>
   ...
 <% end %>
 ```
@@ -161,13 +163,15 @@ form or do weird things using jQuery. The `class` attribute is one of the
 optionally assign a string wrapped in quotes.
 
 ```erb
-<%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get, class: :formtastic ) do %>
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get, class: :formtastic ) do %>
   ...
 <% end %>
 ```
 
 ```html
-<form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic" data-remote="true" method="get">
+<form accept-charset="UTF-8" action="/pages/simple_forms.json"
+  class="formtastic" data-remote="true" method="get">
   ...
 </form>
 ```
@@ -178,13 +182,15 @@ all in quotes with each separated by spaces as I would do if I was writing
 the actually markup by hand.
 
 ```erb
-<%= form_tag( { controller: :pages, action: :simple_forms, format: :json }, remote: true, method: :get, class: [:formtastic, :responsively] ) do %>
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get, class: [:formtastic, :responsively] ) do %>
   ...
 <% end %>
 ```
 
 ```html
-<form accept-charset="UTF-8" action="/pages/simple_forms.json" class="formtastic responsively" data-remote="true" method="get">
+<form accept-charset="UTF-8" action="/pages/simple_forms.json"
+  class="formtastic responsively" data-remote="true" method="get">
   ...
 </form>
 ```
