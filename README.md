@@ -83,7 +83,7 @@ Rails to a URL that is used in the resulting HTML.
 ```
 
 You may have noticed in the previous two examples that the `action` and
-`controller` options were specified within a separate map. This map is the
+`controller` options were specified within a separate hash. This hash is the
 `url_for_options` argument and it contains the options related to the URL
 that will be requested by this form. I will show in a few examples how that
 will also give me the opportunity to specify the format I am requesting.
@@ -124,7 +124,7 @@ That seems a little dirty though. I would rather specify the `action` and
 `controller` as I was doing before as well as the `json` format and let
 Rails do the work of building the URL. I can do just that by jumping
 back to the code I had before the previous example and then add the
-`format` option to the `url_for_options` map.
+`format` option to the `url_for_options` hash.
 
 ```erb
 <%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
