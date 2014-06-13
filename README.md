@@ -248,3 +248,19 @@ to make my intent clear, I can specify the
   ...
 </form>
 ```
+
+Now all at once.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get, class: :formtastic, id: :form1337, role: :form ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json"
+  class="formtastic" data-remote="true" id="form1337" method="get" role="form">
+  ...
+</form>
+```
