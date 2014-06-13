@@ -211,3 +211,21 @@ I can also add an `id` attribute if I'd like. It is even easier than the
   ...
 </form>
 ```
+
+As for adding multiple `id` attributes, I will opt for approach that wraps
+them in quotes. The other methods I've used above are also options and is a
+matter of personal preference as well as consistency across the code base.
+
+```erb
+<%= form_tag( { controller: :pages, action: :simple_forms, format: :json },
+  remote: true, method: :get, id: "multi-id-form weird-form" ) do %>
+  ...
+<% end %>
+```
+
+```html
+<form accept-charset="UTF-8" action="/pages/simple_forms.json"
+  data-remote="true" id="multi-id-form weird-form" method="get">
+  ...
+</form>
+```
